@@ -93,8 +93,8 @@ function App() {
     axios.get(URL)
       .then(function (response) {
         setResults([...results, ...response.data.results]);
-        setCloneResults({ ...cloneResults, ...response.data.results });
-        setVisible({ ...visible, loading: false });
+        setCloneResults([...cloneResults, ...response.data.results]);
+        setVisible({...visible, loading: false});
       });
   }
 
